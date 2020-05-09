@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_hrO6UISkEeqLlNxbQBcCEA" name="abstractFactory">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_hswkUISkEeqLlNxbQBcCEA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_kfysoISkEeqLlNxbQBcCEA" name="OpenHPI_Java_Capstone_1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_kiolQISkEeqLlNxbQBcCEA" name="ca">
+        <packagedElement xmi:type="uml:Package" xmi:id="_kipzYISkEeqLlNxbQBcCEA" name="openhpi">
+          <packagedElement xmi:type="uml:Package" xmi:id="_kiqacISkEeqLlNxbQBcCEA" name="capstone1">
+            <packagedElement xmi:type="uml:Package" xmi:id="_kiqacYSkEeqLlNxbQBcCEA" name="patterns">
+              <packagedElement xmi:type="uml:Package" xmi:id="_kiqacoSkEeqLlNxbQBcCEA" name="abstractFactory">
+                <packagedElement xmi:type="uml:Class" xmi:id="_kiuE0ISkEeqLlNxbQBcCEA" name="AbstractFactory" visibility="public" isAbstract="true">
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_kiv6AISkEeqLlNxbQBcCEA" name="createProductX" visibility="public" isAbstract="true">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_kiyWQISkEeqLlNxbQBcCEA" type="_kixIIISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_kiy9UISkEeqLlNxbQBcCEA" name="createProductY" visibility="public" isAbstract="true">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_ki2AoISkEeqLlNxbQBcCEA" type="_ki0ygISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_kixIIISkEeqLlNxbQBcCEA" name="ProductX" visibility="public" isAbstract="true"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_ki0ygISkEeqLlNxbQBcCEA" name="ProductY" visibility="public" isAbstract="true"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_ki9VYISkEeqLlNxbQBcCEA" name="Context" visibility="public">
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kp7gEISkEeqLlNxbQBcCEA" name="main" specification="_kpy9MISkEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    String type = &quot;B&quot;;&#xD;
+    AbstractFactory factory;&#xD;
+    if (&quot;A&quot;.equals(type)) {&#xD;
+        factory = new FactoryA();&#xD;
+        factory.createProductX();&#xD;
+        factory.createProductY();&#xD;
+    } else {&#xD;
+        factory = new FactoryB();&#xD;
+        factory.createProductX();&#xD;
+        factory.createProductY();&#xD;
+    }&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_kpy9MISkEeqLlNxbQBcCEA" name="main" visibility="public" isStatic="true" method="_kp7gEISkEeqLlNxbQBcCEA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_kp0yYISkEeqLlNxbQBcCEA" name="args" type="_kjA_wISkEeqLlNxbQBcCEA">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kp5D0ISkEeqLlNxbQBcCEA"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kp5q4ISkEeqLlNxbQBcCEA" value="*"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_kqoqsISkEeqLlNxbQBcCEA" name="ProductAX" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_kqp40ISkEeqLlNxbQBcCEA" general="_kixIIISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kqybsISkEeqLlNxbQBcCEA" name="ProductAX" specification="_kqrG8ISkEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    System.out.println(&quot;ProductAX created&quot;);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_kqrG8ISkEeqLlNxbQBcCEA" name="ProductAX" visibility="public" method="_kqybsISkEeqLlNxbQBcCEA"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_kq37QISkEeqLlNxbQBcCEA" name="ProductAY" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_kq4iUISkEeqLlNxbQBcCEA" general="_ki0ygISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_krAeIISkEeqLlNxbQBcCEA" name="ProductAY" specification="_kq5wcISkEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    System.out.println(&quot;ProductAY created&quot;);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_kq5wcISkEeqLlNxbQBcCEA" name="ProductAY" visibility="public" method="_krAeIISkEeqLlNxbQBcCEA"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_krF9sISkEeqLlNxbQBcCEA" name="ProductBX" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_krHL0ISkEeqLlNxbQBcCEA" general="_kixIIISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_krPHoISkEeqLlNxbQBcCEA" name="ProductBX" specification="_krIZ8ISkEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    System.out.println(&quot;ProductBX created&quot;);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_krIZ8ISkEeqLlNxbQBcCEA" name="ProductBX" visibility="public" method="_krPHoISkEeqLlNxbQBcCEA"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_krUnMISkEeqLlNxbQBcCEA" name="ProductBY" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_krV1UISkEeqLlNxbQBcCEA" general="_ki0ygISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kreYMISkEeqLlNxbQBcCEA" name="ProductBY" specification="_krXDcISkEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    System.out.println(&quot;ProductBY created&quot;);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_krXDcISkEeqLlNxbQBcCEA" name="ProductBY" visibility="public" method="_kreYMISkEeqLlNxbQBcCEA"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_rl7zcISlEeqLlNxbQBcCEA" name="FactoryA" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_rl-2wISlEeqLlNxbQBcCEA" general="_kiuE0ISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_rmBTAISlEeqLlNxbQBcCEA" name="createProductX" specification="_rmAE4ISlEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return new ProductAX();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_rmDvQISlEeqLlNxbQBcCEA" name="createProductY" specification="_rmB6EISlEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return new ProductAY();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_rmAE4ISlEeqLlNxbQBcCEA" name="createProductX" visibility="public" method="_rmBTAISlEeqLlNxbQBcCEA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_rmAr8ISlEeqLlNxbQBcCEA" type="_kixIIISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_rmB6EISlEeqLlNxbQBcCEA" name="createProductY" visibility="public" method="_rmDvQISlEeqLlNxbQBcCEA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_rmChIISlEeqLlNxbQBcCEA" type="_ki0ygISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_vpXzsISlEeqLlNxbQBcCEA" name="FactoryB" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_vpZB0ISlEeqLlNxbQBcCEA" general="_kiuE0ISkEeqLlNxbQBcCEA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vpaP8ISlEeqLlNxbQBcCEA" name="createProductX" specification="_vpZB0YSlEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return new ProductBX();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vpbeEYSlEeqLlNxbQBcCEA" name="createProductY" specification="_vpa3AISlEeqLlNxbQBcCEA">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return new ProductBY();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_vpZB0YSlEeqLlNxbQBcCEA" name="createProductX" visibility="public" method="_vpaP8ISlEeqLlNxbQBcCEA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_vpZo4ISlEeqLlNxbQBcCEA" type="_kixIIISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_vpa3AISlEeqLlNxbQBcCEA" name="createProductY" visibility="public" method="_vpbeEYSlEeqLlNxbQBcCEA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_vpbeEISlEeqLlNxbQBcCEA" type="_ki0ygISkEeqLlNxbQBcCEA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Usage" xmi:id="_Ig7fUIT3Eeq5eeazx2i6Fw" client="_ki9VYISkEeqLlNxbQBcCEA" supplier="_kiuE0ISkEeqLlNxbQBcCEA"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ki-jgISkEeqLlNxbQBcCEA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ki_xoISkEeqLlNxbQBcCEA" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_kjAYsISkEeqLlNxbQBcCEA" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_kjA_wISkEeqLlNxbQBcCEA" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_khmDcISkEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_khqU4ISkEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kiQKwISkEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kiRY4ISkEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_kilh8ISkEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kimwEISkEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_kpwg8ISkEeqLlNxbQBcCEA" name="java.lang.String" base_Classifier="_kjA_wISkEeqLlNxbQBcCEA"/>
+  <standard:Create xmi:id="_kqv_cISkEeqLlNxbQBcCEA" base_BehavioralFeature="_kqrG8ISkEeqLlNxbQBcCEA"/>
+  <standard:Create xmi:id="_kq-B4ISkEeqLlNxbQBcCEA" base_BehavioralFeature="_kq5wcISkEeqLlNxbQBcCEA"/>
+  <standard:Create xmi:id="_krMrYISkEeqLlNxbQBcCEA" base_BehavioralFeature="_krIZ8ISkEeqLlNxbQBcCEA"/>
+  <standard:Create xmi:id="_krb78ISkEeqLlNxbQBcCEA" base_BehavioralFeature="_krXDcISkEeqLlNxbQBcCEA"/>
+  <PapyrusJava:External xmi:id="_FJ7AgISlEeqLlNxbQBcCEA" name="AbstractFactory" base_Classifier="_kiuE0ISkEeqLlNxbQBcCEA"/>
+  <PapyrusJava:External xmi:id="_FKEKcISlEeqLlNxbQBcCEA" name="ProductX" base_Classifier="_kixIIISkEeqLlNxbQBcCEA"/>
+  <PapyrusJava:External xmi:id="_FKPwoISlEeqLlNxbQBcCEA" name="ProductY" base_Classifier="_ki0ygISkEeqLlNxbQBcCEA"/>
+</xmi:XMI>

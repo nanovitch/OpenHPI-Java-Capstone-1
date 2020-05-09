@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_iEeA8IYpEeqb0OeXhph6Ew" name="counter3">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_iFqTwIYpEeqb0OeXhph6Ew">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pvpHcIYqEeqb0OeXhph6Ew" name="OpenHPI_Java_Capstone_1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_px2G4IYqEeqb0OeXhph6Ew" name="ca">
+        <packagedElement xmi:type="uml:Package" xmi:id="_px2t8IYqEeqb0OeXhph6Ew" name="openhpi">
+          <packagedElement xmi:type="uml:Package" xmi:id="_px3VAIYqEeqb0OeXhph6Ew" name="capstone1">
+            <packagedElement xmi:type="uml:Package" xmi:id="_px38EIYqEeqb0OeXhph6Ew" name="patterns">
+              <packagedElement xmi:type="uml:Package" xmi:id="_px4jIIYqEeqb0OeXhph6Ew" name="counter3">
+                <packagedElement xmi:type="uml:Package" xmi:id="_px5xQIYqEeqb0OeXhph6Ew" name="controller">
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_px80kIYqEeqb0OeXhph6Ew" name="Controller" visibility="public">
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_px-CsIYqEeqb0OeXhph6Ew" name="handleEvent" visibility="private"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p4ao8IYqEeqb0OeXhph6Ew" name="CounterController2" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p4dFMIYqEeqb0OeXhph6Ew" name="counter" visibility="private" type="_pyEJUYYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_Fbqo8oYzEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew" association="_FbqB4IYzEeqb0OeXhph6Ew"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_p4bQAIYqEeqb0OeXhph6Ew" name="CounterController2 implements Controller" client="_p4ao8IYqEeqb0OeXhph6Ew" supplier="_px80kIYqEeqb0OeXhph6Ew" contract="_px80kIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p4m2MYYqEeqb0OeXhph6Ew" name="CounterController2" specification="_p4dsQIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.counter = counter;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p4ndQYYqEeqb0OeXhph6Ew" name="handleEvent" specification="_p4ndQIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    counter.updateCount(30);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p4dsQIYqEeqb0OeXhph6Ew" name="CounterController2" visibility="public" method="_p4m2MYYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p4m2MIYqEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p4ndQIYqEeqb0OeXhph6Ew" name="handleEvent" visibility="public" method="_p4ndQYYqEeqb0OeXhph6Ew"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p4sVwIYqEeqb0OeXhph6Ew" name="CounterControllerStrategy" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p4sVwYYqEeqb0OeXhph6Ew" name="counterController1" visibility="private" type="_px80kIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p4s80IYqEeqb0OeXhph6Ew" name="counterController2" visibility="private" type="_px80kIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p480cIYqEeqb0OeXhph6Ew" name="largeStep" visibility="private" isUnique="false">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_p4-CkIYqEeqb0OeXhph6Ew" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>false</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_kxdSAoYxEeqb0OeXhph6Ew" name="countercontroller1" type="_dtFFwIYwEeqb0OeXhph6Ew" association="_kxcD4IYxEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_4L7RMYYyEeqb0OeXhph6Ew" name="countercontroller2" type="_p4ao8IYqEeqb0OeXhph6Ew" association="_4L6DEIYyEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p6MKkIYqEeqb0OeXhph6Ew" name="CounterControllerStrategy" specification="_p4-poIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.counterController1 = new CounterController(counter);&#xD;
+    this.counterController2 = new CounterController2(counter);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p6PN4IYqEeqb0OeXhph6Ew" name="handleEvent" specification="_p6N_wIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    if (largeStep == true) {&#xD;
+        counterController1.handleEvent();&#xD;
+        largeStep = false;&#xD;
+    } else {&#xD;
+        counterController2.handleEvent();&#xD;
+        largeStep = true;&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p4-poIYqEeqb0OeXhph6Ew" name="CounterControllerStrategy" visibility="public" method="_p6MKkIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6LjgIYqEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6N_wIYqEeqb0OeXhph6Ew" name="handleEvent" visibility="public" method="_p6PN4IYqEeqb0OeXhph6Ew"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_dtFFwIYwEeqb0OeXhph6Ew" name="CounterController1" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_dtZO0IYwEeqb0OeXhph6Ew" name="counter" visibility="private" type="_pyEJUYYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_ILuVwIYzEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew" association="_ILtHoIYzEeqb0OeXhph6Ew"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_dtQE4IYwEeqb0OeXhph6Ew" name="CounterController1 implements Controller" client="_dtFFwIYwEeqb0OeXhph6Ew" supplier="_px80kIYqEeqb0OeXhph6Ew" contract="_px80kIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dtlcEIYwEeqb0OeXhph6Ew" name="CounterController1" specification="_dtbrEIYwEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.counter = counter;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_dtq7oIYwEeqb0OeXhph6Ew" name="handleEvent" specification="_dtpGcIYwEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    counter.updateCount(5);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_dtbrEIYwEeqb0OeXhph6Ew" name="CounterController1" visibility="public" method="_dtlcEIYwEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dtk1AIYwEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_dtpGcIYwEeqb0OeXhph6Ew" name="handleEvent" visibility="public" method="_dtq7oIYwEeqb0OeXhph6Ew"/>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_pyEJUIYqEeqb0OeXhph6Ew" name="model">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_pyEJUYYqEeqb0OeXhph6Ew" name="Counter" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p6XJsIYqEeqb0OeXhph6Ew" name="count" visibility="private" isUnique="false">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_p6Y-4IYqEeqb0OeXhph6Ew" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>0</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p6cCMIYqEeqb0OeXhph6Ew" name="observers" visibility="private" type="_p6bbIIYqEeqb0OeXhph6Ew" isUnique="false">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p6dQUIYqEeqb0OeXhph6Ew"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p6d3YIYqEeqb0OeXhph6Ew" value="*"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_p6fFgIYqEeqb0OeXhph6Ew" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new ArrayList&lt;Observer>()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_xKgncYYzEeqb0OeXhph6Ew" name="observer" type="_p6bbIIYqEeqb0OeXhph6Ew" association="_xKdkIIYzEeqb0OeXhph6Ew">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xKhOgIYzEeqb0OeXhph6Ew"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xKhOgYYzEeqb0OeXhph6Ew" value="*"/>
+                    </ownedAttribute>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_p6V7kIYqEeqb0OeXhph6Ew" name="Counter implements Subject" client="_pyEJUYYqEeqb0OeXhph6Ew" supplier="_p6UtcIYqEeqb0OeXhph6Ew" contract="_p6UtcIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p6iI0IYqEeqb0OeXhph6Ew" name="updateCount" specification="_p6gToIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.count += value;&#xD;
+    notifyAllObservers();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p6maQIYqEeqb0OeXhph6Ew" name="attach" specification="_p6j-AIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    observers.add(observer);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p6o2gIYqEeqb0OeXhph6Ew" name="notifyAllObservers" specification="_p6oPcIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    for (Observer observer : observers) {&#xD;
+        observer.update(count);&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6gToIYqEeqb0OeXhph6Ew" name="updateCount" visibility="public" method="_p6iI0IYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6hhwIYqEeqb0OeXhph6Ew" name="value">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6j-AIYqEeqb0OeXhph6Ew" name="attach" visibility="public" method="_p6maQIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6lMIIYqEeqb0OeXhph6Ew" name="observer" type="_p6bbIIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6oPcIYqEeqb0OeXhph6Ew" name="notifyAllObservers" visibility="public" method="_p6o2gIYqEeqb0OeXhph6Ew"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_p6UtcIYqEeqb0OeXhph6Ew" name="Subject" visibility="public">
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6tvAIYqEeqb0OeXhph6Ew" name="attach" visibility="public">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6vkMIYqEeqb0OeXhph6Ew" name="observer" type="_p6bbIIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6wyUIYqEeqb0OeXhph6Ew" name="notifyAllObservers" visibility="private"/>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_p6a0EIYqEeqb0OeXhph6Ew" name="view">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p6bbIIYqEeqb0OeXhph6Ew" name="Observer" visibility="public" isAbstract="true">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p8_m8IYqEeqb0OeXhph6Ew" name="display" visibility="protected" type="_p7OFUIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p9LNIIYqEeqb0OeXhph6Ew" name="Observer" specification="_p9CDMIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.display = display;&#xD;
+    subject.attach(this);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p9CDMIYqEeqb0OeXhph6Ew" name="Observer" visibility="public" method="_p9LNIIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p9Iw4IYqEeqb0OeXhph6Ew" name="display" type="_p7OFUIYqEeqb0OeXhph6Ew"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p9J_AIYqEeqb0OeXhph6Ew" name="subject" type="_p6UtcIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p9MbQIYqEeqb0OeXhph6Ew" name="update" visibility="public" isAbstract="true">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p9OQcIYqEeqb0OeXhph6Ew" name="value" type="_p8BWkIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p7UzAIYqEeqb0OeXhph6Ew" name="CounterViewMove" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_p8QnIIYqEeqb0OeXhph6Ew" general="_p6bbIIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p8a_MIYqEeqb0OeXhph6Ew" name="CounterViewMove" specification="_p8R1QIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(display, subject);&#xD;
+    update(0);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p8gewIYqEeqb0OeXhph6Ew" name="update" specification="_p8dbcIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    try {&#xD;
+        int x = (int) value;&#xD;
+        display.fill(0);&#xD;
+        display.rect(x, 10, 10, 10);&#xD;
+        display.redraw();&#xD;
+    } catch (ClassCastException e) {&#xD;
+        System.out.println(e.getMessage());&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p8R1QIYqEeqb0OeXhph6Ew" name="CounterViewMove" visibility="public" method="_p8a_MIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8Yi8IYqEeqb0OeXhph6Ew" name="display" type="_p7OFUIYqEeqb0OeXhph6Ew"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8ZxEIYqEeqb0OeXhph6Ew" name="subject" type="_p6UtcIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p8dbcIYqEeqb0OeXhph6Ew" name="update" visibility="public" method="_p8gewIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8fQoIYqEeqb0OeXhph6Ew" name="value" type="_p8BWkIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p7X2UIYqEeqb0OeXhph6Ew" name="CounterViewColor" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_p7z7MIYqEeqb0OeXhph6Ew" general="_p6bbIIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7-6UIYqEeqb0OeXhph6Ew" name="CounterViewColor" specification="_p71wYIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(display, subject);&#xD;
+    update(0);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p8KggIYqEeqb0OeXhph6Ew" name="update" specification="_p8HdMIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    try {&#xD;
+        int[] colors = new int[3];&#xD;
+        int v = (int) value;&#xD;
+        colors[0] = (v * 10) % 255;&#xD;
+        colors[1] = (v * 5) % 255;&#xD;
+        colors[2] = (v * 20) % 255;&#xD;
+        display.fill(colors[0], colors[1], colors[2]);&#xD;
+        display.rect(1, 1, 10, 10);&#xD;
+        display.redraw();&#xD;
+    } catch (ClassCastException e) {&#xD;
+        System.out.println(e.getMessage());&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p71wYIYqEeqb0OeXhph6Ew" name="CounterViewColor" visibility="public" method="_p7-6UIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p79FIIYqEeqb0OeXhph6Ew" name="display" type="_p7OFUIYqEeqb0OeXhph6Ew"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p7-TQIYqEeqb0OeXhph6Ew" name="subject" type="_p6UtcIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p8HdMIYqEeqb0OeXhph6Ew" name="update" visibility="public" method="_p8KggIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8JSYIYqEeqb0OeXhph6Ew" name="value" type="_p8BWkIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p7aSkIYqEeqb0OeXhph6Ew" name="CounterViewNumber" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_p8l-UIYqEeqb0OeXhph6Ew" general="_p6bbIIYqEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p8yLkIYqEeqb0OeXhph6Ew" name="CounterViewNumber" specification="_p8nMcIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    super(display, subject);&#xD;
+    update(&quot;0&quot;);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p845QIYqEeqb0OeXhph6Ew" name="update" specification="_p81O4IYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    display.fill(0);&#xD;
+    display.textSize(32);&#xD;
+    display.text(value + &quot;&quot;, 10, 30);&#xD;
+    display.redraw();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p8nMcIYqEeqb0OeXhph6Ew" name="CounterViewNumber" visibility="public" method="_p8yLkIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8wWYIYqEeqb0OeXhph6Ew" name="display" type="_p7OFUIYqEeqb0OeXhph6Ew"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p8xkgIYqEeqb0OeXhph6Ew" name="subject" type="_p6UtcIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p81O4IYqEeqb0OeXhph6Ew" name="update" visibility="public" method="_p845QIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p83EEIYqEeqb0OeXhph6Ew" name="value" type="_p8BWkIYqEeqb0OeXhph6Ew"/>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_p6yngIYqEeqb0OeXhph6Ew" name="starter">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p61DwIYqEeqb0OeXhph6Ew" name="Main" visibility="public">
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7DGMIYqEeqb0OeXhph6Ew" name="main" specification="_p6-0wIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    PApplet.main(new String[] { TheApp.class.getName() });&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p6-0wIYqEeqb0OeXhph6Ew" name="main" visibility="public" isStatic="true" method="_p7DGMIYqEeqb0OeXhph6Ew">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_p7Ap8IYqEeqb0OeXhph6Ew" name="args" type="_p64uIIYqEeqb0OeXhph6Ew">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p7B4EIYqEeqb0OeXhph6Ew"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p7CfIIYqEeqb0OeXhph6Ew" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_p7Ka8IYqEeqb0OeXhph6Ew" name="TheApp" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_p7Tk4IYqEeqb0OeXhph6Ew" general="_p7OFUIYqEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p7WBIIYqEeqb0OeXhph6Ew" name="counterViewMove" visibility="private" type="_p7UzAIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p7YdYIYqEeqb0OeXhph6Ew" name="counterViewColor" visibility="private" type="_p7X2UIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p7a5oIYqEeqb0OeXhph6Ew" name="counterViewNumber" visibility="private" type="_p7aSkIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p7cu0IYqEeqb0OeXhph6Ew" name="counterControllerStrategy" visibility="private" type="_p4sVwIYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_p7ekAIYqEeqb0OeXhph6Ew" name="counter" visibility="private" type="_pyEJUYYqEeqb0OeXhph6Ew" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_dCCvQoYxEeqb0OeXhph6Ew" name="countercontrollerstrategy" type="_p4sVwIYqEeqb0OeXhph6Ew" association="_dCBhIIYxEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_XsnQwoYzEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew" association="_XsmCoIYzEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_hVtR8oYzEeqb0OeXhph6Ew" name="counterviewmove" type="_p7UzAIYqEeqb0OeXhph6Ew" association="_hVsq4IYzEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_jl6aAoYzEeqb0OeXhph6Ew" name="counterviewnumber" type="_p7aSkIYqEeqb0OeXhph6Ew" association="_jl5L4IYzEeqb0OeXhph6Ew"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_oMp7oYYzEeqb0OeXhph6Ew" name="counterviewcolor" type="_p7X2UIYqEeqb0OeXhph6Ew" association="_oMotgIYzEeqb0OeXhph6Ew"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7hAQIYqEeqb0OeXhph6Ew" name="settings" specification="_p7fyIIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    size(200, 200);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7kDkIYqEeqb0OeXhph6Ew" name="setup" specification="_p7i1cIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    frameRate(30);&#xD;
+    counter = new Counter();&#xD;
+    counterControllerStrategy = new CounterControllerStrategy(counter);&#xD;
+    counterViewMove = new CounterViewMove(this, counter);&#xD;
+    counterViewColor = new CounterViewColor(this, counter);&#xD;
+    counterViewNumber = new CounterViewNumber(this, counter);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7mf0IYqEeqb0OeXhph6Ew" name="draw" specification="_p7lRsIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    background(204);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_p7pjIIYqEeqb0OeXhph6Ew" name="mouseClicked" specification="_p7oVAIYqEeqb0OeXhph6Ew">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    counterControllerStrategy.handleEvent();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p7fyIIYqEeqb0OeXhph6Ew" name="settings" visibility="public" method="_p7hAQIYqEeqb0OeXhph6Ew"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p7i1cIYqEeqb0OeXhph6Ew" name="setup" visibility="public" method="_p7kDkIYqEeqb0OeXhph6Ew"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p7lRsIYqEeqb0OeXhph6Ew" name="draw" visibility="public" method="_p7mf0IYqEeqb0OeXhph6Ew"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_p7oVAIYqEeqb0OeXhph6Ew" name="mouseClicked" visibility="public" method="_p7pjIIYqEeqb0OeXhph6Ew"/>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Usage" xmi:id="_9bvIgIYzEeqb0OeXhph6Ew" client="_p61DwIYqEeqb0OeXhph6Ew" supplier="_p7Ka8IYqEeqb0OeXhph6Ew"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_p62R4IYqEeqb0OeXhph6Ew" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_p63gAIYqEeqb0OeXhph6Ew" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_p64HEIYqEeqb0OeXhph6Ew" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_p64uIIYqEeqb0OeXhph6Ew" name="String"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_p8BWkIYqEeqb0OeXhph6Ew" name="Object"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_p7LpEIYqEeqb0OeXhph6Ew" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_p7MQIIYqEeqb0OeXhph6Ew" name="processing">
+        <packagedElement xmi:type="uml:Package" xmi:id="_p7M3MIYqEeqb0OeXhph6Ew" name="core">
+          <packagedElement xmi:type="uml:Class" xmi:id="_p7OFUIYqEeqb0OeXhph6Ew" name="PApplet"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dCBhIIYxEeqb0OeXhph6Ew" memberEnd="_dCCvQoYxEeqb0OeXhph6Ew _dCD9YYYxEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dCCvQIYxEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dCCvQYYxEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_dCD9YYYxEeqb0OeXhph6Ew" name="theapp" type="_p7Ka8IYqEeqb0OeXhph6Ew" association="_dCBhIIYxEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kxcD4IYxEeqb0OeXhph6Ew" memberEnd="_kxdSAoYxEeqb0OeXhph6Ew _kxfHMYYxEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kxdSAIYxEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kxdSAYYxEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kxfHMYYxEeqb0OeXhph6Ew" name="countercontrollerstrategy" type="_p4sVwIYqEeqb0OeXhph6Ew" association="_kxcD4IYxEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4L6DEIYyEeqb0OeXhph6Ew" memberEnd="_4L7RMYYyEeqb0OeXhph6Ew _4L74QoYyEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4L6qIIYyEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4L7RMIYyEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4L74QoYyEeqb0OeXhph6Ew" name="countercontrollerstrategy" type="_p4sVwIYqEeqb0OeXhph6Ew" association="_4L6DEIYyEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_FbqB4IYzEeqb0OeXhph6Ew" memberEnd="_Fbqo8oYzEeqb0OeXhph6Ew _Fbr3EYYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Fbqo8IYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Fbqo8YYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Fbr3EYYzEeqb0OeXhph6Ew" name="countercontroller2" type="_p4ao8IYqEeqb0OeXhph6Ew" association="_FbqB4IYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ILtHoIYzEeqb0OeXhph6Ew" memberEnd="_ILuVwIYzEeqb0OeXhph6Ew _ILu80oYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ILtusIYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ILtusYYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ILu80oYzEeqb0OeXhph6Ew" name="countercontroller1" type="_dtFFwIYwEeqb0OeXhph6Ew" association="_ILtHoIYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_XsmCoIYzEeqb0OeXhph6Ew" memberEnd="_XsnQwoYzEeqb0OeXhph6Ew _Xsn30oYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XsnQwIYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XsnQwYYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Xsn30oYzEeqb0OeXhph6Ew" name="theapp" type="_p7Ka8IYqEeqb0OeXhph6Ew" association="_XsmCoIYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hVsq4IYzEeqb0OeXhph6Ew" memberEnd="_hVtR8oYzEeqb0OeXhph6Ew _hVugEYYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hVtR8IYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hVtR8YYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_hVugEYYzEeqb0OeXhph6Ew" name="theapp" type="_p7Ka8IYqEeqb0OeXhph6Ew" association="_hVsq4IYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jl5L4IYzEeqb0OeXhph6Ew" memberEnd="_jl6aAoYzEeqb0OeXhph6Ew _jl7oIIYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jl6aAIYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jl6aAYYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jl7oIIYzEeqb0OeXhph6Ew" name="theapp" type="_p7Ka8IYqEeqb0OeXhph6Ew" association="_jl5L4IYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_oMotgIYzEeqb0OeXhph6Ew" memberEnd="_oMp7oYYzEeqb0OeXhph6Ew _oMqisoYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oMpUkIYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oMp7oIYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_oMqisoYzEeqb0OeXhph6Ew" name="theapp" type="_p7Ka8IYqEeqb0OeXhph6Ew" association="_oMotgIYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xKdkIIYzEeqb0OeXhph6Ew" memberEnd="_xKgncYYzEeqb0OeXhph6Ew _xKhOgoYzEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xKgAYIYzEeqb0OeXhph6Ew" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xKgncIYzEeqb0OeXhph6Ew" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xKhOgoYzEeqb0OeXhph6Ew" name="counter" type="_pyEJUYYqEeqb0OeXhph6Ew" association="_xKdkIIYzEeqb0OeXhph6Ew"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pxGgAIYqEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pxHuIIYqEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pxfhkIYqEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pxgvsIYqEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pxzDkIYqEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_px0RsIYqEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_p4h9sIYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p4dsQIYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_p5DiIIYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p4-poIYqEeqb0OeXhph6Ew"/>
+  <PapyrusJava:External xmi:id="_p68_kIYqEeqb0OeXhph6Ew" name="java.lang.String" base_Classifier="_p64uIIYqEeqb0OeXhph6Ew"/>
+  <PapyrusJava:External xmi:id="_p7RvsIYqEeqb0OeXhph6Ew" name="processing.core.PApplet" base_Classifier="_p7OFUIYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_p76B0IYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p71wYIYqEeqb0OeXhph6Ew"/>
+  <PapyrusJava:External xmi:id="_p8FoAIYqEeqb0OeXhph6Ew" name="java.lang.Object" base_Classifier="_p8BWkIYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_p8WGsIYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p8R1QIYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_p8ssAIYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p8nMcIYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_p9FtkIYqEeqb0OeXhph6Ew" base_BehavioralFeature="_p9CDMIYqEeqb0OeXhph6Ew"/>
+  <PapyrusJava:External xmi:id="_dtLzcIYwEeqb0OeXhph6Ew" name="Controller" base_Classifier="_px80kIYqEeqb0OeXhph6Ew"/>
+  <PapyrusJava:External xmi:id="_dtWykIYwEeqb0OeXhph6Ew" name="ca.openhpi.capstone1.patterns.counter3.model.Counter" base_Classifier="_pyEJUYYqEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_dthKoIYwEeqb0OeXhph6Ew" base_BehavioralFeature="_dtbrEIYwEeqb0OeXhph6Ew"/>
+</xmi:XMI>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Fsn_IIUMEeqb0OeXhph6Ew" name="mvc">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_FwQh8IUMEeqb0OeXhph6Ew">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_Fs_ykIUMEeqb0OeXhph6Ew" name="Activity1"/>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_FttkQIUMEeqb0OeXhph6Ew" name="StateMachine2">
+    <region xmi:type="uml:Region" xmi:id="_Ft4jYIUMEeqb0OeXhph6Ew" name="Region1"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_FuAfMIUMEeqb0OeXhph6Ew" name="Interaction3"/>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_FuN6kIUMEeqb0OeXhph6Ew" name="Activity4"/>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_FuY5sIUMEeqb0OeXhph6Ew" name="Interaction5"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_53UIkIUMEeqb0OeXhph6Ew" name="Actor8"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CXpx8IUNEeqb0OeXhph6Ew" name="controler"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JvrvcIUNEeqb0OeXhph6Ew" name="view"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OKqF8IUNEeqb0OeXhph6Ew" name="MODEL"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Gs6FgIUOEeqb0OeXhph6Ew" name="presents" client="_Fsn_IIUMEeqb0OeXhph6Ew" supplier="_53UIkIUMEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Y9YzQIUOEeqb0OeXhph6Ew" name="interacts" client="_53UIkIUMEeqb0OeXhph6Ew" supplier="_JvrvcIUNEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_L-xLQIUPEeqb0OeXhph6Ew" name="MODEL"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NY6OAIUPEeqb0OeXhph6Ew" name="CONTROLER"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_O_4L0IUPEeqb0OeXhph6Ew" name="VIEW"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_gCcU8IUPEeqb0OeXhph6Ew" name="pass event" informationSource="_O_4L0IUPEeqb0OeXhph6Ew" informationTarget="_NY6OAIUPEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_hoDn4IUPEeqb0OeXhph6Ew" name="updates model" informationSource="_NY6OAIUPEeqb0OeXhph6Ew" informationTarget="_L-xLQIUPEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_i5NtwIUPEeqb0OeXhph6Ew" name="notify observer" informationSource="_L-xLQIUPEeqb0OeXhph6Ew _Fsn_IIUMEeqb0OeXhph6Ew" informationTarget="_O_4L0IUPEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_7B9SkIUTEeqb0OeXhph6Ew" name="register observer" informationSource="_O_4L0IUPEeqb0OeXhph6Ew" informationTarget="_L-xLQIUPEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FYzxoIUUEeqb0OeXhph6Ew" name="USER"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_JPQewIUUEeqb0OeXhph6Ew" name="interacts" informationSource="_FYzxoIUUEeqb0OeXhph6Ew" informationTarget="_O_4L0IUPEeqb0OeXhph6Ew"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_NRuOoIUUEeqb0OeXhph6Ew" name="presents" informationSource="_O_4L0IUPEeqb0OeXhph6Ew" informationTarget="_FYzxoIUUEeqb0OeXhph6Ew"/>
+</uml:Model>

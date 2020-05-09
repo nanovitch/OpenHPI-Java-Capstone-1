@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_UxSf8IRCEeqLlNxbQBcCEA" name="strategy">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_U8j70IRCEeqLlNxbQBcCEA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_y6dS8IRCEeqLlNxbQBcCEA" name="OpenHPI_Java_Capstone_1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_y6r8cIRCEeqLlNxbQBcCEA" name="patterns">
+        <packagedElement xmi:type="uml:Package" xmi:id="_y6uYsIRCEeqLlNxbQBcCEA" name="strategy">
+          <packagedElement xmi:type="uml:Package" xmi:id="_zDD1UIRCEeqLlNxbQBcCEA" name="ca">
+            <packagedElement xmi:type="uml:Package" xmi:id="_zDG4oIRCEeqLlNxbQBcCEA" name="openhpi">
+              <packagedElement xmi:type="uml:Package" xmi:id="_zDJU4IRCEeqLlNxbQBcCEA" name="capstone1">
+                <packagedElement xmi:type="uml:Package" xmi:id="_zDQCkIRCEeqLlNxbQBcCEA" name="patterns">
+                  <packagedElement xmi:type="uml:Package" xmi:id="_zDTF4IRCEeqLlNxbQBcCEA" name="strategy">
+                    <packagedElement xmi:type="uml:Interface" xmi:id="_zEQvMIRCEeqLlNxbQBcCEA" name="Strategy" visibility="public">
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_EQr-8IRDEeqLlNxbQBcCEA" name="operation" visibility="private"/>
+                    </packagedElement>
+                    <packagedElement xmi:type="uml:Class" xmi:id="_EOSLMIRDEeqLlNxbQBcCEA" name="ConcreteStrategy2" visibility="public">
+                      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EOe_gIRDEeqLlNxbQBcCEA" name="ConcreteStrategy2 implements Strategy" client="_EOSLMIRDEeqLlNxbQBcCEA" supplier="_zEQvMIRCEeqLlNxbQBcCEA" contract="_zEQvMIRCEeqLlNxbQBcCEA"/>
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EOhbwIRDEeqLlNxbQBcCEA" name="operation" specification="_EOgNoIRDEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    System.out.println(&quot;Strategy2&quot;);&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_EOgNoIRDEeqLlNxbQBcCEA" name="operation" visibility="public" method="_EOhbwIRDEeqLlNxbQBcCEA"/>
+                    </packagedElement>
+                    <packagedElement xmi:type="uml:Class" xmi:id="_EOm7UIRDEeqLlNxbQBcCEA" name="ConcreteStrategy3" visibility="public">
+                      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_EOpXkIRDEeqLlNxbQBcCEA" name="ConcreteStrategy3 implements Strategy" client="_EOm7UIRDEeqLlNxbQBcCEA" supplier="_zEQvMIRCEeqLlNxbQBcCEA" contract="_zEQvMIRCEeqLlNxbQBcCEA"/>
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EOrMwIRDEeqLlNxbQBcCEA" name="operation" specification="_EOp-oIRDEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    System.out.println(&quot;Strategy3&quot;);&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_EOp-oIRDEeqLlNxbQBcCEA" name="operation" visibility="public" method="_EOrMwIRDEeqLlNxbQBcCEA"/>
+                    </packagedElement>
+                    <packagedElement xmi:type="uml:Class" xmi:id="_EO1k0IRDEeqLlNxbQBcCEA" name="Context" visibility="public">
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_EQiN8IRDEeqLlNxbQBcCEA" name="main" specification="_EQRvQIRDEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    StrategySelector selector = new StrategySelector();&#xD;
+    Strategy strategy = selector.getStrategy(1);&#xD;
+    strategy.operation();&#xD;
+    strategy = selector.getStrategy(2);&#xD;
+    strategy.operation();&#xD;
+    strategy = selector.getStrategy(3);&#xD;
+    strategy.operation();&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_EQRvQIRDEeqLlNxbQBcCEA" name="main" visibility="public" isStatic="true" method="_EQiN8IRDEeqLlNxbQBcCEA">
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EQZEAIRDEeqLlNxbQBcCEA" name="args" type="_EO85kIRDEeqLlNxbQBcCEA">
+                          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EQdVcIRDEeqLlNxbQBcCEA"/>
+                          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EQfxsIRDEeqLlNxbQBcCEA" value="*"/>
+                        </ownedParameter>
+                      </ownedOperation>
+                    </packagedElement>
+                    <packagedElement xmi:type="uml:Class" xmi:id="_ERFnkIRDEeqLlNxbQBcCEA" name="StrategySelector" visibility="public">
+                      <ownedAttribute xmi:type="uml:Property" xmi:id="_ERJR8IRDEeqLlNxbQBcCEA" name="strategy1" visibility="private" type="_zEQvMIRCEeqLlNxbQBcCEA" isUnique="false"/>
+                      <ownedAttribute xmi:type="uml:Property" xmi:id="_ERNjYIRDEeqLlNxbQBcCEA" name="strategy2" visibility="private" type="_zEQvMIRCEeqLlNxbQBcCEA" isUnique="false"/>
+                      <ownedAttribute xmi:type="uml:Property" xmi:id="_ERSb4IRDEeqLlNxbQBcCEA" name="strategy3" visibility="private" type="_zEQvMIRCEeqLlNxbQBcCEA" isUnique="false"/>
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ERvu4IRDEeqLlNxbQBcCEA" name="StrategySelector" specification="_ERXUYIRDEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    strategy1 = new ConcreteStrategy1();&#xD;
+    strategy2 = new ConcreteStrategy2();&#xD;
+    strategy3 = new ConcreteStrategy3();&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ESqU4IRDEeqLlNxbQBcCEA" name="getStrategy" specification="_ESc5gIRDEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    Strategy selectedStrategy;&#xD;
+    switch(strategy) {&#xD;
+        case 1:&#xD;
+            selectedStrategy = strategy1;&#xD;
+            break;&#xD;
+        case 2:&#xD;
+            selectedStrategy = strategy2;&#xD;
+            break;&#xD;
+        case 3:&#xD;
+            selectedStrategy = strategy3;&#xD;
+            break;&#xD;
+        default:&#xD;
+            selectedStrategy = strategy1;&#xD;
+    }&#xD;
+    return selectedStrategy;&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_ERXUYIRDEeqLlNxbQBcCEA" name="StrategySelector" visibility="public" method="_ERvu4IRDEeqLlNxbQBcCEA"/>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_ESc5gIRDEeqLlNxbQBcCEA" name="getStrategy" visibility="public" method="_ESqU4IRDEeqLlNxbQBcCEA">
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ESjnMIRDEeqLlNxbQBcCEA" type="_zEQvMIRCEeqLlNxbQBcCEA" direction="return"/>
+                        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ESmqgIRDEeqLlNxbQBcCEA" name="strategy">
+                          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                        </ownedParameter>
+                      </ownedOperation>
+                    </packagedElement>
+                    <packagedElement xmi:type="uml:Class" xmi:id="_h36g4ISjEeqLlNxbQBcCEA" name="ConcreteStrategy1" visibility="public">
+                      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_h37vAISjEeqLlNxbQBcCEA" name="ConcreteStrategy1 implements Strategy" client="_h36g4ISjEeqLlNxbQBcCEA" supplier="_zEQvMIRCEeqLlNxbQBcCEA" contract="_zEQvMIRCEeqLlNxbQBcCEA"/>
+                      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_h39kMISjEeqLlNxbQBcCEA" name="operation" specification="_h38WEISjEeqLlNxbQBcCEA">
+                        <language>JAVA</language>
+                        <body>&#xD;
+    System.out.println(&quot;Strategy1&quot;);&#xD;
+</body>
+                      </ownedBehavior>
+                      <ownedOperation xmi:type="uml:Operation" xmi:id="_h38WEISjEeqLlNxbQBcCEA" name="operation" visibility="public" method="_h39kMISjEeqLlNxbQBcCEA"/>
+                    </packagedElement>
+                  </packagedElement>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EO4BEIRDEeqLlNxbQBcCEA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_EO6dUIRDEeqLlNxbQBcCEA" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_EO7rcIRDEeqLlNxbQBcCEA" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_EO85kIRDEeqLlNxbQBcCEA" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_y_wpsIRCEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y_3-cIRCEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zBiLUIRCEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zBmcwIRCEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zBquMIRCEeqLlNxbQBcCEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zBtKcIRCEeqLlNxbQBcCEA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_zT_NQIRCEeqLlNxbQBcCEA" name="Strategy" base_Classifier="_zEQvMIRCEeqLlNxbQBcCEA"/>
+  <PapyrusJava:External xmi:id="_EP1DUIRDEeqLlNxbQBcCEA" name="java.lang.String" base_Classifier="_EO85kIRDEeqLlNxbQBcCEA"/>
+  <standard:Create xmi:id="_ERpBMIRDEeqLlNxbQBcCEA" base_BehavioralFeature="_ERXUYIRDEeqLlNxbQBcCEA"/>
+</xmi:XMI>

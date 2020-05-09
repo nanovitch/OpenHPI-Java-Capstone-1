@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_6FP14IUXEeqb0OeXhph6Ew" name="composite">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_6GmgwIUXEeqb0OeXhph6Ew">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8LnFcIUXEeqb0OeXhph6Ew" name="OpenHPI_Java_Capstone_1">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8OCuYIUXEeqb0OeXhph6Ew" name="ca">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8OD8gIUXEeqb0OeXhph6Ew" name="openhpi">
+          <packagedElement xmi:type="uml:Package" xmi:id="_8OEjkIUXEeqb0OeXhph6Ew" name="capstone1">
+            <packagedElement xmi:type="uml:Package" xmi:id="_8OFKoIUXEeqb0OeXhph6Ew" name="patterns">
+              <packagedElement xmi:type="uml:Package" xmi:id="_8OGYwIUXEeqb0OeXhph6Ew" name="composite">
+                <packagedElement xmi:type="uml:Class" xmi:id="_8OKqMIUXEeqb0OeXhph6Ew" name="Component" visibility="public" isAbstract="true">
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8OMfYIUXEeqb0OeXhph6Ew" name="operation" visibility="public" isAbstract="true"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_8OdlIIUXEeqb0OeXhph6Ew" name="Composite" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_8OezQIUXEeqb0OeXhph6Ew" general="_8OKqMIUXEeqb0OeXhph6Ew"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_8OgBYIUXEeqb0OeXhph6Ew" name="children" visibility="private" type="_8OKqMIUXEeqb0OeXhph6Ew" isUnique="false">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8OidoIUXEeqb0OeXhph6Ew"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8OjEsIUXEeqb0OeXhph6Ew" value="*"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_8UeGgIUXEeqb0OeXhph6Ew" name="type" visibility="private" type="_8OmvEIUXEeqb0OeXhph6Ew" isUnique="false"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8UyPkIUXEeqb0OeXhph6Ew" name="Composite" specification="_8UiX8IUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    this.type = type;&#xD;
+    children = new ArrayList&lt;>();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8U0r0IUXEeqb0OeXhph6Ew" name="add" specification="_8Uy2oIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    children.add(component);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8U8AkIUXEeqb0OeXhph6Ew" name="remove" specification="_8U4WMIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    children.remove(component);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8VbIwIUXEeqb0OeXhph6Ew" name="getChild" specification="_8VWQQIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return children.get(index);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8VgBQIUXEeqb0OeXhph6Ew" name="operation" specification="_8VfaMIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+//do something&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8VmH4IUXEeqb0OeXhph6Ew" name="toString" specification="_8VidgIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    String out = &quot;start &quot; + type + &quot;------------------&quot; + System.lineSeparator();&#xD;
+    for (Component child : children) {&#xD;
+        out += child;&#xD;
+    }&#xD;
+    out += &quot;end &quot; + type + &quot;------------------&quot; + System.lineSeparator();&#xD;
+    return out;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8UiX8IUXEeqb0OeXhph6Ew" name="Composite" visibility="public" method="_8UyPkIUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8UvzUIUXEeqb0OeXhph6Ew" name="type" type="_8OmvEIUXEeqb0OeXhph6Ew"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8Uy2oIUXEeqb0OeXhph6Ew" name="add" visibility="public" method="_8U0r0IUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8UzdsIUXEeqb0OeXhph6Ew" name="component" type="_8OKqMIUXEeqb0OeXhph6Ew"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8U4WMIUXEeqb0OeXhph6Ew" name="remove" visibility="public" method="_8U8AkIUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8U6LYIUXEeqb0OeXhph6Ew" name="component" type="_8OKqMIUXEeqb0OeXhph6Ew"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8VWQQIUXEeqb0OeXhph6Ew" name="getChild" visibility="public" method="_8VbIwIUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8VXeYIUXEeqb0OeXhph6Ew" type="_8OKqMIUXEeqb0OeXhph6Ew" direction="return"/>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8VZTkIUXEeqb0OeXhph6Ew" name="index">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8VfaMIUXEeqb0OeXhph6Ew" name="operation" visibility="public" method="_8VgBQIUXEeqb0OeXhph6Ew"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8VidgIUXEeqb0OeXhph6Ew" name="toString" visibility="public" method="_8VmH4IUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8VkSsIUXEeqb0OeXhph6Ew" type="_8OmvEIUXEeqb0OeXhph6Ew" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_8Vs1kIUXEeqb0OeXhph6Ew" name="Context" visibility="public">
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8VzjQIUXEeqb0OeXhph6Ew" name="main" specification="_8VuqwIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    Composite frame = new Composite(&quot;Frame&quot;);&#xD;
+    Composite layoutTop = new Composite(&quot;TopLayout&quot;);&#xD;
+    Composite layoutBottom = new Composite(&quot;BottomLayout&quot;);&#xD;
+    Leaf textInput = new Leaf(&quot;textInput&quot;);&#xD;
+    Leaf button = new Leaf(&quot;Button&quot;);&#xD;
+    Leaf map = new Leaf(&quot;Map&quot;);&#xD;
+    layoutTop.add(textInput);&#xD;
+    layoutTop.add(button);&#xD;
+    layoutBottom.add(map);&#xD;
+    frame.add(layoutTop);&#xD;
+    frame.add(layoutBottom);&#xD;
+    System.out.println(frame);&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8VuqwIUXEeqb0OeXhph6Ew" name="main" visibility="public" isStatic="true" method="_8VzjQIUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8Vwf8IUXEeqb0OeXhph6Ew" name="args" type="_8OmvEIUXEeqb0OeXhph6Ew">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8VxuEIUXEeqb0OeXhph6Ew"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8VyVIIUXEeqb0OeXhph6Ew" value="*"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_8V7fEIUXEeqb0OeXhph6Ew" name="Leaf" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_8V8GIIUXEeqb0OeXhph6Ew" general="_8OKqMIUXEeqb0OeXhph6Ew"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_8V8tMIUXEeqb0OeXhph6Ew" name="type" visibility="private" type="_8OmvEIUXEeqb0OeXhph6Ew" isUnique="false"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8WL9wIUXEeqb0OeXhph6Ew" name="Leaf" specification="_8V9UQIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    this.type = type;&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8WPBEIUXEeqb0OeXhph6Ew" name="operation" specification="_8WNy8IUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+//do something&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8WWV0IUXEeqb0OeXhph6Ew" name="toString" specification="_8WSEYIUXEeqb0OeXhph6Ew">
+                    <language>JAVA</language>
+                    <body>&#xD;
+    return type + System.lineSeparator();&#xD;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8V9UQIUXEeqb0OeXhph6Ew" name="Leaf" visibility="public" method="_8WL9wIUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8WLWsIUXEeqb0OeXhph6Ew" name="type" type="_8OmvEIUXEeqb0OeXhph6Ew"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8WNy8IUXEeqb0OeXhph6Ew" name="operation" visibility="public" method="_8WPBEIUXEeqb0OeXhph6Ew"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_8WSEYIUXEeqb0OeXhph6Ew" name="toString" visibility="public" method="_8WWV0IUXEeqb0OeXhph6Ew">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_8WUgoIUXEeqb0OeXhph6Ew" type="_8OmvEIUXEeqb0OeXhph6Ew" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Usage" xmi:id="_m5xqEIUYEeqb0OeXhph6Ew" client="_8Vs1kIUXEeqb0OeXhph6Ew" supplier="_8V7fEIUXEeqb0OeXhph6Ew"/>
+                <packagedElement xmi:type="uml:Usage" xmi:id="_p27-wIUYEeqb0OeXhph6Ew" client="_8Vs1kIUXEeqb0OeXhph6Ew" supplier="_8OdlIIUXEeqb0OeXhph6Ew"/>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8OkS0IUXEeqb0OeXhph6Ew" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8Olg8IUXEeqb0OeXhph6Ew" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8OmIAIUXEeqb0OeXhph6Ew" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_8OmvEIUXEeqb0OeXhph6Ew" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8NO2EIUXEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8NTHgIUXEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8NtXMIUXEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8NulUIUXEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8N_rEIUXEeqb0OeXhph6Ew">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8OA5MIUXEeqb0OeXhph6Ew" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_8UZ1EIUXEeqb0OeXhph6Ew" name="java.lang.String" base_Classifier="_8OmvEIUXEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_8Urh4IUXEeqb0OeXhph6Ew" base_BehavioralFeature="_8UiX8IUXEeqb0OeXhph6Ew"/>
+  <standard:Create xmi:id="_8WHFQIUXEeqb0OeXhph6Ew" base_BehavioralFeature="_8V9UQIUXEeqb0OeXhph6Ew"/>
+</xmi:XMI>
